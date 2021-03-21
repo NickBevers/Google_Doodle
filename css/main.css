@@ -103,14 +103,15 @@ a {
 
 .office{
 	background-color: #A7E2F9;
-	width: 600px;
-	height: 400px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .close_up_needle{
 	display: none;
-	width: 600px;
-	height: 400px;
+	width: 100%;
+	height: 100%;
 }
 
 .bloodvessel{
@@ -119,43 +120,68 @@ a {
 	height: 400px;
 }
 
+
 .lamp{
 	background-image: url(/images/Lamp.png);
 	position: absolute;
-	width: 70px;
-	height: 64px; 
-	left: 75px;
-	top: -1px;
+	background-repeat: no-repeat;
+	background-position: 75px -1px;
+	width: 100%;
+	height: 100%;
+	animation: move_lamp 2s ease-out;
+	animation-delay: 10s;
+}
+
+@keyframes move_lamp{
+	0%{}
+	100%{background-position: 225px -1px;}
 }
 
 .cross{
 	background-image: url(/images/Cross.png);
 	position: absolute;
-	left: 230px;
-	top: 30px;
-	width: 132px;
-	height: 132px;
+	background-repeat: no-repeat;
+	background-position: 230px 30px;
+	width: 100%;
+	height: 100%;
+	animation: move_cross 2s ease-out;
+	animation-delay: 10s;
+}
+
+@keyframes move_cross{
+	0%{}
+	100%{background-position: 380px 30px;}
 }
 
 .text{
 	background-image: url(/images/Text.png);
 	position: absolute;
-	left: 400px;
-	top: 40px;
-	width: 170px;
-	height: 104px;
+	background-repeat: no-repeat;
+	background-position: 400px 40px;
+	width: 100%;
+	height: 100%;
+	animation: move_text 2s ease-out;
+	animation-delay: 10s;
+}
+
+@keyframes move_text{
+	0%{}
+	100%{background-position: 550px 40px;}
 }
 
 .person{
-	animation: fade_in 2s 1 ease-out;
+	animation: fade_in 10s 1 ease-out;
+	animation-fill-mode: forwards;
 }
 
 @keyframes fade_in{
 	0%{transform: translateY(200px);}
-	100%{transform: translateY(0);}
+	20%{transform: translateY(0);}
+	97%{transform: translateX(0);}
+	100%{transform: translateX(-900px);}
 }
 
-.body{
+.body_person{
 	background-image: url(/images/Body.png);
 	position: absolute;
 	left: 440px;
@@ -190,14 +216,35 @@ a {
 	left: 515px;
 	top: 270px;
 	animation: wave_hand 0.75s linear alternate;
-	animation-delay: 4s;
-	animation-iteration-count: 10;
+	animation-delay: 3s;
+	animation-iteration-count: 6;
 	transform-origin: 0% 100%;
 }
 
 @keyframes wave_hand{
 	0%{transform: rotate(0);}
 	100%{transform: rotate(20deg);}
+}
+
+
+.curtains{
+	background-image: url(/images/Curtains.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 218px;
+	left: 0;
+	bottom: 0;
+	z-index: 5;
+	background-position: -240px 0;
+	overflow: visible;
+	animation: curtains 4s 8s ease-in-out;
+}
+ 
+@keyframes curtains{
+	0%{background-position: -240px 0;}
+	50%{background-position: -50px 0;}
+	100%{background-position: -640px 0;}
 }
 
 .cellwalls{
