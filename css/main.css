@@ -101,10 +101,103 @@ a {
 	overflow: hidden;
 }
 
-.background{
+.office{
 	background-color: #A7E2F9;
 	width: 600px;
 	height: 400px;
+}
+
+.close_up_needle{
+	display: none;
+	width: 600px;
+	height: 400px;
+}
+
+.bloodvessel{
+	display: none;
+	width: 600px;
+	height: 400px;
+}
+
+.lamp{
+	background-image: url(/images/Lamp.png);
+	position: absolute;
+	width: 70px;
+	height: 64px; 
+	left: 75px;
+	top: -1px;
+}
+
+.cross{
+	background-image: url(/images/Cross.png);
+	position: absolute;
+	left: 230px;
+	top: 30px;
+	width: 132px;
+	height: 132px;
+}
+
+.text{
+	background-image: url(/images/Text.png);
+	position: absolute;
+	left: 400px;
+	top: 40px;
+	width: 170px;
+	height: 104px;
+}
+
+.person{
+	animation: fade_in 2s 1 ease-out;
+}
+
+@keyframes fade_in{
+	0%{transform: translateY(200px);}
+	100%{transform: translateY(0);}
+}
+
+.body{
+	background-image: url(/images/Body.png);
+	position: absolute;
+	left: 440px;
+	top: 203px;
+	width: 93px;
+	height: 197px;
+}
+
+.arm_left{
+	background-image: url(/images/Arm_Left.png);
+	position: absolute;
+	width: 23px;
+	height: 132px;
+	left: 420px;
+	top: 260px;
+	animation: shock 0.2s linear;
+	animation-delay: 1.8s;
+	transform-origin: 50% 0%;
+}
+
+@keyframes shock{
+	0%{transform: rotate(0);}
+	50%{transform: rotate(5deg) translateY(-5px);}
+	100%{transform: rotate(0);}
+}
+
+.arm_right{
+	background-image: url(/images/Arm_right.png);
+	position: absolute;
+	width: 47px;
+	height: 62px;
+	left: 515px;
+	top: 270px;
+	animation: wave_hand 0.75s linear alternate;
+	animation-delay: 4s;
+	animation-iteration-count: 10;
+	transform-origin: 0% 100%;
+}
+
+@keyframes wave_hand{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(20deg);}
 }
 
 .cellwalls{
