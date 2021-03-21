@@ -98,11 +98,35 @@ a {
 	margin: 0;
 	width: 600px;
 	height: 400px;
+	overflow: hidden;
 }
 
 .background{
 	background-color: #A7E2F9;
 	width: 600px;
 	height: 400px;
+}
+
+.cellwalls{
+	background-repeat: no-repeat;
+	visibility: hidden;
+}
+
+.cellwall_top{
+	background-image: url(/images/Cellwall_top.png);
+	width: 100%;
+	height: 74px;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+}
+
+.cellwall_bottom{
+	background-image: url(/images/Cellwall_bottom.png);
+	width: 100%;
+	height: 74px;
+	position: absolute;
+	left: 0%;
+	bottom: -2px;
 }
 
