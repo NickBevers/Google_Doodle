@@ -293,13 +293,24 @@ a {
 
 
 /* Blood vessels - part 1 */
+
 .close_up_needle{
 	position: absolute;
 	overflow: hidden;
+	background-color: #A7E2F9;
 	width: 100%;
 	height: 100%;
 	top: 0;
+	opacity: 0;
+	animation: fade_in_part2 0.1s linear forwards;
+	animation-delay: 13.5s;
 }
+
+@keyframes fade_in_part2{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
 
 .mag_glass{
 	background-image: url(/images/mag_glass.png);
@@ -318,14 +329,59 @@ a {
 	100%{background-position: 235px 150px; transform: scale(800%);}
 }
 
+.arm_close{
+	background-image: url(/images/Arm_close_up.png);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: -500px 112px;
+	animation: arm_close_up 1.5s linear forwards;
+	animation-delay: 13.5s;
+	border-radius: 50%;
+}
 
+@keyframes arm_close_up{
+	0%{background-position: 0px 150px;  background-size: 30%; transform: translateX(-50px); border-radius: 50%;}
+	100%{background-position: -2px 100px; background-size: 100%; transform: translateX(0); border-radius: 0;}
+}
+
+
+.dotted_circle{
+	background-image: url(/images/Dotted_circle.png);
+	width: 100%;
+	height: 100%;
+	position: absolute; 
+	background-repeat: no-repeat;
+	background-position: 220px 170px;
+	opacity: 0;
+	animation: dotted_circle 1s linear forwards;
+	animation-iteration-count: 3;
+	animation-delay: 15s;
+}
+
+@keyframes dotted_circle{
+	0%{opacity: 0;}
+	50%{opacity: 1;}
+	100%{opacity: 0;}
+}
 
 /* Blood vessels - part 2 */
-
 .bloodvessel{
-	display: none;
-	width: 600px;
-	height: 400px;
+	position: absolute;
+	overflow: hidden;
+	background-color: #CC6666;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	opacity: 0;
+	animation: fade_in_vessels 0.5s linear forwards;
+	animation-delay: 18.5s;
+}
+
+@keyframes fade_in_vessels{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
 }
 
 
