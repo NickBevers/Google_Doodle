@@ -101,6 +101,7 @@ a {
 	overflow: hidden;
 }
 
+/* Office section - part 1 */
 .office{
 	background-color: #A7E2F9;
 	width: 100%;
@@ -129,7 +130,7 @@ a {
 	width: 100%;
 	height: 100%;
 	animation: move_lamp 2s ease-out;
-	animation-delay: 10s;
+	animation-delay: 9s;
 }
 
 @keyframes move_lamp{
@@ -145,7 +146,7 @@ a {
 	width: 100%;
 	height: 100%;
 	animation: move_cross 2s ease-out;
-	animation-delay: 10s;
+	animation-delay: 9s;
 }
 
 @keyframes move_cross{
@@ -161,7 +162,7 @@ a {
 	width: 100%;
 	height: 100%;
 	animation: move_text 2s ease-out;
-	animation-delay: 10s;
+	animation-delay: 9s;
 }
 
 @keyframes move_text{
@@ -170,7 +171,7 @@ a {
 }
 
 .person{
-	animation: fade_in 10s 1 ease-out;
+	animation: fade_in 9s 1 ease-out;
 	animation-fill-mode: forwards;
 }
 
@@ -215,7 +216,7 @@ a {
 	height: 62px;
 	left: 515px;
 	top: 270px;
-	animation: wave_hand 0.75s linear alternate;
+	animation: wave_hand 0.5s linear alternate;
 	animation-delay: 3s;
 	animation-iteration-count: 6;
 	transform-origin: 0% 100%;
@@ -235,10 +236,10 @@ a {
 	height: 218px;
 	left: 0;
 	bottom: 0;
-	z-index: 5;
+	z-index: 10;
 	background-position: -240px 0;
 	overflow: visible;
-	animation: curtains 4s 8s ease-in-out;
+	animation: curtains 4s 7s ease-in-out;
 }
  
 @keyframes curtains{
@@ -246,6 +247,55 @@ a {
 	50%{background-position: -50px 0;}
 	100%{background-position: -640px 0;}
 }
+
+/* Office section - part 2 */
+
+.section2{
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+}
+
+.chair{
+	background-image: url(/images/Chair.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: -410px 127px;
+	animation: trans_in_chair 1s ease-out;
+	animation-delay: 10s;
+	animation-fill-mode: forwards;
+}
+
+.patient_chair{
+	background-image: url(/images/Patient_chair.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: -380px 125px;
+	animation: trans_in_patient 1s ease-out;
+	animation-delay: 10s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes trans_in_chair{
+	0%{background-position: -380px 127px;}
+	100%{background-position: 0 130px;}
+}
+
+@keyframes trans_in_patient{
+	0%{background-position: -380px 127px;}
+	100%{background-position: 50px 127px;}
+}
+
+
+
+
+
+
+/* Blood vessels - part 1 */
 
 .cellwalls{
 	background-repeat: no-repeat;
