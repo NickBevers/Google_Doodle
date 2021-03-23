@@ -371,9 +371,10 @@ a {
 	position: absolute;
 	overflow: hidden;
 	background-color: #CC6666;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	top: 0;
 	opacity: 0;
 	animation: fade_in_vessels 0.5s linear forwards;
 	animation-delay: 18.5s;
@@ -386,25 +387,61 @@ a {
 
 
 .cellwalls{
+	background-image: url(/images/Cellwalls.png);
+	width: 100%;
+	height: 100%;
 	background-repeat: no-repeat;
-	visibility: hidden;
+	background-position: 0 0;
+	animation: cellwalls_move 2s infinite linear;
+	animation-delay: 19s;
 }
 
-.cellwall_top{
-	background-image: url(/images/Cellwall_top.png);
+@keyframes cellwalls_move{
+	0%{background-position-x: 0;}
+	100%{background-position-x: -600px;}
+}
+
+.bloodcells{
 	width: 100%;
-	height: 74px;
-	position: absolute;
-	left: 0%;
-	top: 0%;
+	height: 100%;
+	animation: bloodcells 2s infinite ease-in-out;
+	animation-delay: 20s;
 }
 
-.cellwall_bottom{
-	background-image: url(/images/Cellwall_bottom.png);
+@keyframes bloodcells{
+	0%{transform: translateY(0);}
+	25%{transform: translateY(-30px);}
+	50%{transform: translateY(0);}
+	75%{transform: translateY(20px);}
+	100%{transform: translateY(0);}
+}
+
+.G_1{
 	width: 100%;
-	height: 74px;
-	position: absolute;
-	left: 0%;
-	bottom: -2px;
+	height: 100%;
 }
 
+.O_1{
+	width: 100%;
+	height: 100%;
+}
+
+.O_2{
+	width: 100%;
+	height: 100%;
+}
+
+.G_2{
+	width: 100%;
+	height: 100%;
+}
+
+.L{
+	width: 100%;
+	height: 100%;
+}
+
+.E{
+	width: 100%;
+	height: 100%;
+}
