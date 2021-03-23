@@ -404,44 +404,118 @@ a {
 .bloodcells{
 	width: 100%;
 	height: 100%;
-	animation: bloodcells 2s infinite ease-in-out;
-	animation-delay: 20s;
+	position: absolute;
+	top: 0;
+	animation: bloodcells 2s infinite linear;
+	animation-delay: 19s;
 }
 
 @keyframes bloodcells{
 	0%{transform: translateY(0);}
-	25%{transform: translateY(-30px);}
+	25%{transform: translateY(-15px);}
 	50%{transform: translateY(0);}
-	75%{transform: translateY(20px);}
+	75%{transform: translateY(15px);}
 	100%{transform: translateY(0);}
 }
 
 .G_1{
-	width: 100%;
-	height: 100%;
+	background-image: url(/images/G_spritesheet.png);
+	width: 76px;
+	height: 54px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 150px;
+	left: 30px;
+	animation: G1 2s forwards steps(12);
+	animation-delay: 22s;
+}
+
+@keyframes G1{
+	0%{background-position: 0 0;}
+	100%{background-position: 0 -648px;}
 }
 
 .O_1{
-	width: 100%;
-	height: 100%;
+	background-image: url(/images/O_spritesheet.png);
+	width: 56px;
+	height: 37px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	animation: O1 1s forwards steps(6);
+	animation-delay: 24s;
+}
+
+@keyframes O1{
+	0%{background-position: 0 0;}
+	100%{background-position: 0 -222px;}
 }
 
 .O_2{
-	width: 100%;
-	height: 100%;
+	background-image: url(/images/O_spritesheet.png);
+	width: 56px;
+	height: 37px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 225px;
+	left: 200px;
+	animation: O2 1.5s forwards steps(6);
+	animation-delay: 25s;
+}
+
+@keyframes O2{
+	0%{background-position: 0 0;}
+	100%{background-position: 0 -222px;}
 }
 
 .G_2{
-	width: 100%;
-	height: 100%;
+	background-image: url(/images/G_spritesheet.png);
+	width: 76px;
+	height: 54px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 150px;
+	left: 250px;
+	animation: G2 3.5s forwards steps(12);
+	animation-delay: 26.5s;
+}
+
+@keyframes G2{
+	0%{background-position: 0 0;}
+	100%{background-position: 0 -648px;}
 }
 
 .L{
-	width: 100%;
-	height: 100%;
+	background-image: url(/images/L_spritesheet.png);
+	width: 48px;
+	height: 45px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 250px;
+	left: 350px;
+	animation: L 2.5s forwards steps(10);
+	animation-delay: 30s;
+}
+
+@keyframes L{
+	0%{background-position: 0 0;}
+	100%{background-position: 0 -450px;}
 }
 
 .E{
-	width: 100%;
-	height: 100%;
+	background-image: url(/images/E_spritesheet.png);
+	width: 50px;
+	height: 145px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 150px;
+	left: 500px;
+	animation: E 4s forwards steps(10);
+	animation-delay: 32.5s;
+}
+
+@keyframes E{
+	0%{background-position: 0 0;}
+	100%{background-position: 0 -1450px;}
 }
